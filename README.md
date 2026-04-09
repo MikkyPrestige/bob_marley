@@ -4,6 +4,11 @@ A modern responsive tribute page dedicated to the King of Reggae, **Bob Marley**
 
 ---
 
+## 🦁 Why Bob?
+Bob Marley is more than just a musician to me; he is a global symbol of resilience and peace. I built this project because his message of "One Love" and his unwavering stand for justice have been a constant source of strength in my own life.
+
+While the world changes, his music remains a "natural mystic" that reminds us to stay grounded, keep our heads up, and live with integrity. This page is my way of keeping that fire burning and sharing his legendary journey with others.
+
 ## Features
 
 - **Modern UI/UX**: A sophisticated dark theme with "Gold, Green, and Red" Rastafarian accents.
