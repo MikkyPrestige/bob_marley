@@ -1,85 +1,306 @@
-body {
-  background-color: whitesmoke;
-  text-align: center;
+:root {
+  --gold: #fed100;
+  --green: #009b4c;
+  --red: #eb1c24;
+  --bg-dark: #121212;
+  --card-bg: #1e1e1e;
+  --text-main: #e0e0e0;
 }
 
-#main {
-  font-size: 16px;
-  line-height: 1.6;
-  font-family: sans-serif;
-  padding: 10px;
-  border-radius: 10%;
-  margin: 20px 10px 20px 10px;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: "Lora", serif;
+  margin: 0;
+  line-height: 1.7;
+  display: flex;
+  justify-content: center;
+}
+
+#main-container {
+  max-width: 900px;
+  width: 95%;
+  margin: 40px 0;
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+#header {
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 4px solid var(--gold);
 }
 
 #title {
-  font-size: 40px;
-  font-family: "supermercado one", serif;
-  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin: 0;
+  letter-spacing: 5px;
+  color: var(--gold);
+}
+
+.subtitle {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  color: var(--green);
 }
 
 #img-div {
-  padding: 10px;
-  margin: auto;
-  border-radius: 20px;
-  background: repeating-linear-gradient(
-    90deg,
-    black 10px,
-    yellow 30px,
-    green 50px,
-    black 10px
-  );
+  margin: 0;
+  background-color: #000;
 }
 
-#img {
-  width: 100%;
-  height: auto;
+#image {
+  max-width: 100%;
   display: block;
+  height: auto;
+  filter: grayscale(20%) contrast(110%);
 }
 
 #img-caption {
-  font-weight: bold;
+  padding: 15px;
+  text-align: center;
   font-style: italic;
-  font-size: large;
+  background: linear-gradient(to right, var(--green), var(--gold), var(--red));
+  color: #000;
+  font-weight: bold;
 }
 
 #tribute-info {
-  text-transform: capitalize;
+  padding: 40px;
 }
 
-#legacy {
+.intro-text {
+  font-size: 1.2rem;
   text-align: center;
-  font-weight: bold;
+  margin-bottom: 40px;
+  border-left: 3px solid var(--green);
+  padding-left: 20px;
 }
 
-#tribute-link {
-  font-weight: 100;
-  font-style: italic;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
 h2 {
-  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  color: var(--gold);
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.details-list {
+  list-style: none;
+  padding: 0;
+}
+
+.details-list li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px dashed #333;
+}
+
+.details-list span {
+  color: var(--green);
   font-weight: bold;
+  margin-right: 10px;
 }
 
-h3 {
+.modern-quote {
+  background: #252525;
+  padding: 30px;
+  margin: 40px 0;
+  border-radius: 8px;
+  position: relative;
+  border-left: 10px solid var(--red);
+}
+
+.modern-quote p {
+  font-size: 1.3rem;
   font-style: italic;
 }
 
-h4 {
-  font-size: 20px;
+cite {
+  display: block;
+  margin-top: 10px;
+  color: var(--gold);
+}
+
+.discography {
+  margin-top: 50px;
+  padding: 5px 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  color: var(--gold);
   text-align: center;
-  font-family: serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 40px;
 }
 
-ul {
-  text-align: left;
-  max-width: 50%;
-  margin: auto;
+.disc-group {
+  margin-bottom: 35px;
 }
 
-.marijuana {
+.disc-group h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1rem;
+  color: #fff;
+  border-left: 4px solid var(--gold);
+  padding-left: 15px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.disc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.full-width-group {
+  grid-column: 1 / -1;
+  width: 100%;
+  border-top: 1px solid #333;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tag-container span {
+  background: #2a2a2a;
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  border: 1px solid #444;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.album-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.tag-container span:hover .album-link {
+  color: var(--gold);
+}
+
+.album-link::before {
+    content: '▶ ';
+    font-size: 0.7rem;
+    opacity: 0.6;
+}
+
+.gold-tags span:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(254, 209, 0, 0.1);
+}
+.green-tags span:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(0, 155, 76, 0.1);
+}
+.red-tags span:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: rgba(235, 28, 36, 0.1);
+}
+.compilation-tags span:hover {
+  border-color: var(--red);
+  color: var(--red);
+  background: rgba(235, 28, 36, 0.1);
+}
+.remix-tags span:hover {
+  border-color: var(--green);
+  color: var(--green);
+  background: rgba(0, 155, 76, 0.1);
+}
+.other-tags span:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(254, 209, 0, 0.1);
+}
+
+.compact-tags {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.compact-tags span {
+  font-size: 0.8rem;
+  padding: 10px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.compact-tags span:hover {
+  background: #252525;
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.helper-text {
+  font-size: 0.8rem;
   font-style: italic;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.footer {
   text-align: center;
-  box-shadow: 10px 10px 5px green, -10px -10px black;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}
+
+#tribute-link {
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid var(--gold);
+}
+
+#tribute-link:hover {
+  color: var(--green);
+  border-color: var(--green);
+}
+
+@media (max-width: 600px) {
+  #tribute-info {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .disc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
 }
