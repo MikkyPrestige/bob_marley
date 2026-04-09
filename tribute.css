@@ -275,14 +275,31 @@ cite {
 }
 
 .footer {
-  text-align: center;
-  margin-top: 50px;
-  font-size: 0.9rem;
+text-align: center;
+    margin-top: 80px;
+    padding: 40px 20px;
+    border-top: 1px solid #333;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.footer-content p {
+    margin: 10px 0;
+    font-size: 0.95rem;
+    color: #888;
+}
+
+.copyright {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 #tribute-link {
   color: var(--gold);
   text-decoration: none;
+  font-weight: bold;
+    transition: color 0.3s;
   border-bottom: 1px solid var(--gold);
 }
 

@@ -483,16 +483,18 @@
                     href="https://youtu.be/r54GFOXRQCA?si=XiG9KtciQ2NaZgkD"
                     target="_blank"
                     class="album-link"
-                  ></a>One Cup of Coffee (1962)
+                  ></a
+                  >One Cup of Coffee (1962)
                 </span>
-                   <span
+                <span
                   ><a
                     href="https://youtu.be/X_kYHhWDk1k?si=hti7cCT0a2V7_Y3M"
                     target="_blank"
                     class="album-link"
                     >Stir It Up (1967)</a
-                  ></span>
-                    <span
+                  ></span
+                >
+                <span
                   ><a
                     href="https://music.apple.com/us/song/trenchtown-rock/156819378"
                     target="_blank"
@@ -500,7 +502,7 @@
                     >Trenchtown Rock (1971)</a
                   ></span
                 >
-                  <span
+                <span
                   ><a
                     href="https://link.deezer.com/s/32WrV6MszRRhTRfwwFTxC"
                     target="_blank"
@@ -508,7 +510,7 @@
                     >Concrete Jungle (1971)</a
                   ></span
                 >
-                  <span
+                <span
                   ><a
                     href="https://youtu.be/5O1WKodlCIA?si=ZT-9SxL68Hminxbt"
                     target="_blank"
@@ -516,7 +518,7 @@
                     >Satisfy My Soul (1971)</a
                   ></span
                 >
-                   <span
+                <span
                   ><a
                     href="https://open.spotify.com/track/5aFxsNveSOSrYiEUNr7bMw?si=4d0f9269ecb84b66"
                     target="_blank"
@@ -524,23 +526,29 @@
                     >Jah Live (1971)</a
                   ></span
                 >
-                 <span><a
+                <span
+                  ><a
                     href="https://youtu.be/5T3UmvutR8k?si=c1wnd1FdoHYHSfxP"
                     target="_blank"
                     class="album-link"
-                    >Sun Is Shining (1971)</a>
+                    >Sun Is Shining (1971)</a
+                  >
                 </span>
-                 <span><a
+                <span
+                  ><a
                     href="https://open.spotify.com/track/1rYEc2fSCbJM4m4FPTr5cK?si=366adbb6a5c84997"
                     target="_blank"
                     class="album-link"
-                    >Smile Jamaica (1976)</a>
+                    >Smile Jamaica (1976)</a
+                  >
                 </span>
-                  <span><a
+                <span
+                  ><a
                     href="https://open.spotify.com/track/7fNDig7N4ezmwE3roBDd2Z?si=bb80c3b966b94843"
                     target="_blank"
                     class="album-link"
-                  >Is This Love (2016)</a>
+                    >Is This Love (2016)</a
+                  >
                 </span>
                 <span>Do You Still Love Me / Snow Boy (1962)</span>
                 <span>I Am Going Home / Destiny (1964)</span>
@@ -620,17 +628,25 @@
         </div>
 
         <footer class="footer">
-          <p>
-            Explore the full legacy on his
-            <a
-              id="tribute-link"
-              href="https://en.wikipedia.org/wiki/Bob_Marley"
-              target="_blank"
-              >Wikipedia Page</a
-            >.
-          </p>
+          <div class="footer-content">
+            <p>Created with ❤️ for the Tuff Gong legacy.</p>
+            <p class="copyright">&copy; <span id="year"></span> | All Rights Reserved</p>
+            <p>
+              Explore the full story on
+              <a
+                id="tribute-link"
+                href="https://en.wikipedia.org/wiki/Bob_Marley"
+                target="_blank"
+                >Wikipedia</a
+              >
+            </p>
+          </div>
         </footer>
       </section>
     </main>
+
+    <script>
+  document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
   </body>
 </html>
